@@ -1,0 +1,23 @@
+/* INDEX.CSS — UNIVERSAL COMPONENTS ONLY */
+/* Large sections that are used across multiple pages (MovingTags, Process, etc.) */
+
+.animate-marquee-left { animation: marquee-left 40s linear infinite; }
+.animate-marquee-right { animation: marquee-right 45s linear infinite; }
+
+/* Global typography resets */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+p, li, span {
+  line-height: var(--body-line);
+  letter-spacing: var(--body-track);
+}
+
+.section-subtitle {
+  font-size: var(--label-size) !important;
+  font-weight: 800 !important;
+  letter-spacing: var(--label-track) !important;
+  text-transform: uppercase !important;
+}

@@ -7,9 +7,9 @@ const SteelFabrication = () => {
   return (
     <main className="overflow-hidden bg-white">
       <SEO 
-        title="Industrial Structural Steel Fabrication Services in Trichy"
-        description="Industrial-grade structural steel fabrication in Trichy. We specialize in I-beam structures, trusses, and heavy-duty metal frames for buildings."
-        keywords="steel fabrication, structural steel work, heavy steel trusses, I-beam fabrication, metal frame construction"
+        title="Structural Steel Fabrication | RIITS Metal Craft"
+        description="Industrial-grade structural steel fabrication in Trichy. We specialize in I-beam structures, trusses, and heavy-duty metal frames."
+        keywords="structural steel, steel trusses, industrial fabrication"
       />
 
       {/* Hero Section */}

@@ -7,9 +7,9 @@ const AluminiumPartition = () => {
   return (
     <main className="overflow-hidden bg-white">
       <SEO 
-        title="Professional Aluminium Office Partition Work in Trichy"
+        title="Aluminium Office Partition Work | RIITS Metal Craft"
         description="High-quality aluminium office partition work and glass cabins in Trichy. Durable, sleek, and affordable partitions for commercial and industrial spaces."
-        keywords="aluminium partition work, office partition contractor, glass partition wall, aluminium cabin work, soundproof office partitions"
+        keywords="aluminium partition, office partition, glass partition"
       />
 
       {/* Hero Section */}

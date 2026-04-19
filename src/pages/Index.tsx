@@ -53,8 +53,8 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: COMPANY_NAME,
-  image: `https://riits.in/og-image.webp`,
-  url: "https://riits.in",
+  image: `https://riitsmetalcraft.in/og-image.jpg`,
+  url: "https://riitsmetalcraft.in",
   telephone: CONTACT_DETAILS.primaryPhone.value,
 
   priceRange: "₹₹",
@@ -68,8 +68,8 @@ const localBusinessSchema = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 10.7905,
-    longitude: 78.7047,
+    latitude: 10.8054,
+    longitude: 78.7438,
   },
   description:
     "Trichy's most trusted metal fabrication studio — crafting steel gates, stainless steel railings, rolling shutters, aluminium windows & ACP cladding that stand the test of time.",
@@ -915,10 +915,11 @@ const Index = () => {
       style={{ scrollBehavior: "smooth" }}
     >
       <SEO
-        title={`Steel Gates, Railings & Metal Fabrication in Trichy | ${COMPANY_NAME}`}
-        description={`RIITS Metal Craft – Trichy's #1 Metal Fabrication Workshop. Specializing in Steel Gates, SS Railings, Rolling Shutters, Aluminium Windows, ACP Cladding, and Precision Laser Cutting. Serving Trichy, Thanjavur, Karur & Pan Tamil Nadu. Contact: 98947 94557 / 63839 98574. Email: riitsmetalcraft@gmail.com. Visit: https://riitsmetalcraft.in/ – Premium metal fabrication built with mastery.`}
-        keywords="steel gate, stainless steel gate, MS gate, metal gate, sliding gate, compound gate, window grill, steel grill, balcony railing, stainless steel railing, staircase railing, steel handrail, steel staircase, metal staircase, rolling shutter, shop shutter, industrial shutter, aluminium door, aluminium window, aluminium sliding window, aluminium partition, glass door, toughened glass door, frameless glass door, glass partition, ACP cladding panel, aluminium cladding panel, building facade panels, steel pergola, metal canopy, steel gate near me, fabrication shop near me, metal fabrication near me, steel fabrication near me, rolling shutter near me, aluminium work near me, glass work near me, railing fabrication near me, gate fabrication near me, grill fabrication near me, metal fabrication trichy, gate fabricators trichy, stainless steel railings trichy, ACP cladding trichy, industrial fabrication tamil nadu"
+        title="Steel Gates & Railings in Trichy | RIITS Metal Craft"
+        description="Best steel gates, railings, and fabrication work in Trichy. Contact RIITS Metal Craft."
+        keywords="steel gates Trichy, railings Trichy, metal fabrication Trichy"
         schemaData={localBusinessSchema}
+        ogImage="/images/home.webp"
       />
 
       {/* Scroll progress bar */}

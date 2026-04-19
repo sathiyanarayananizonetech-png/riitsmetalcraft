@@ -10,6 +10,7 @@ interface SEOProps {
   ogType?: "website" | "article" | "product";
   twitterCard?: "summary" | "summary_large_image";
   schemaData?: object;
+  omitBranding?: boolean;
 }
 
 const SEO = ({
@@ -17,13 +18,17 @@ const SEO = ({
   description,
   keywords,
   canonical,
-  ogImage = "/preview.png",
+  ogImage = "/images/home.webp",
   ogType = "website",
   twitterCard = "summary",
   schemaData,
+  omitBranding = false,
 }: SEOProps) => {
   const siteName = COMPANY_NAME;
-  const fullTitle = `${title} | ${siteName}`;
+  const fullTitle = omitBranding || title.includes(siteName) 
+    ? title 
+    : `${title} | ${siteName}`;
+  
   const siteUrl = "https://riitsmetalcraft.in";
   const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
 
@@ -37,9 +42,9 @@ const SEO = ({
 
       {/* Local SEO Geo Tags */}
       <meta name="geo.region" content="IN-TN" />
-      <meta name="geo.placename" content="Tiruchirappalli" />
-      <meta name="geo.position" content="10.7905;78.7047" />
-      <meta name="ICBM" content="10.7905, 78.7047" />
+      <meta name="geo.placename" content="Trichy" />
+      <meta name="geo.position" content="10.8054;78.7438" />
+      <meta name="ICBM" content="10.8054, 78.7438" />
 
       {/* Open Graph */}
       <meta property="og:site_name" content={siteName} />
@@ -58,7 +63,9 @@ const SEO = ({
 
       {/* Structured Data */}
       {schemaData && (
-        <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(schemaData)}
+        </script>
       )}
     </Helmet>
   );

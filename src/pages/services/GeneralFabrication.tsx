@@ -7,9 +7,9 @@ const GeneralFabrication = () => {
   return (
     <main className="overflow-hidden bg-white">
       <SEO 
-        title="Custom Metal & General Fabrication Services in Trichy"
+        title="Custom Metal & General Fabrication | RIITS Metal Craft"
         description="All-in-one shop for general fabrication work in Trichy. Custom welding, metal repairs, laser cutting, and architectural metal works."
-        keywords="general fabrication work, metal fabrication service, custom welding service, laser-cut metal panels, architectural fabrication"
+        keywords="metal fabrication, general fabrication, custom welding"
       />
 
       {/* Hero Section */}

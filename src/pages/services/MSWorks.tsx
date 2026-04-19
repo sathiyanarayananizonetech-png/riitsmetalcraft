@@ -7,9 +7,9 @@ const MSWorks = () => {
   return (
     <main className="overflow-hidden bg-white">
       <SEO 
-        title="Durable MS Gate & Window Grill Fabrication in Trichy"
-        description="Leading Mild Steel (MS) works contractor in Trichy. Durable MS gates, security grills, MS sheds, and general structural MS fabrication at best prices."
-        keywords="MS works, mild steel fabrication, heavy-duty MS gates, window grills, MS safety doors, MS sheds"
+        title="MS Gate & Window Grill Fabrication | RIITS Metal Craft"
+        description="Leading Mild Steel (MS) works contractor in Trichy. Durable MS gates, security grills, MS sheds, and general structural MS fabrication."
+        keywords="MS gates, window grills, mild steel fabrication"
       />
 
       {/* Hero Section */}

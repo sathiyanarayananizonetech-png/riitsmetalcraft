@@ -96,9 +96,10 @@ const Contact = () => {
   return (
     <main className="pt-14 md:pt-16">
       <SEO
-        title={`Contact ${COMPANY_NAME} — Fabrication Shop in Trichy for Steel Gate, Railing, Rolling Shutter & Aluminium Works`}
-        description={`Contact RIITS Metal Craft — your trusted fabrication shop in Trichy. Get a free quote for Steel Gates, SS Railings, Rolling Shutters, Aluminium Windows, ACP Cladding, and Glass Partitions. Call: 98947 94557 / 63839 98574. Email: riitsmetalcraft@gmail.com. Visit: https://riitsmetalcraft.in/`}
-        keywords="fabrication shop in Trichy, steel fabrication in Trichy, gate fabrication in Trichy, rolling shutter shop in Trichy, aluminium window work in Trichy, fabrication shop near me, steel gate work near me, rolling shutter near me, grill work near me"
+        title="Contact Us | RIITS Metal Craft"
+        description="Get in touch with RIITS Metal Craft for steel and fabrication work in Trichy."
+        keywords="contact metal work Trichy, steel gate shop Trichy"
+        ogImage="/images/contact.webp"
       />
 
       <style>{`

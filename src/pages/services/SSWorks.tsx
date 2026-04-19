@@ -7,9 +7,9 @@ const SSWorks = () => {
   return (
     <main className="overflow-hidden bg-white">
       <SEO 
-        title="Premium SS Railing & Gate Fabrication in Trichy (304 Grade)"
+        title="SS Railing & Gate Fabrication | RIITS Metal Craft"
         description="Experts in Stainless Steel (SS) works in Trichy. SS 304 grade gates, balcony railings, staircases, and custom decorative SS fabrication."
-        keywords="SS works, stainless steel fabrication, SS 304 gate designs, SS railings with glass, SS spiral staircases"
+        keywords="SS railings, SS gates, stainless steel fabrication"
       />
 
       {/* Hero Section */}

@@ -7,9 +7,9 @@ const AluminiumWindows = () => {
   return (
     <main className="overflow-hidden bg-white">
       <SEO 
-        title="Premium Aluminium Windows & Toughened Glass Works in Trichy"
-        description="Manufacturers of high-grade aluminium windows, sliding systems, and toughened glass works in Trichy. Energy-efficient and soundproof window solutions."
-        keywords="aluminium windows, toughened glass work, sliding windows, casement windows, structural glazing, glass handrails"
+        title="Aluminium Windows & Glass Works | RIITS Metal Craft"
+        description="Manufacturers of high-grade aluminium windows, sliding systems, and toughened glass works in Trichy. Energy-efficient and soundproof solutions."
+        keywords="aluminium windows, sliding windows, toughened glass"
       />
 
       {/* Hero Section */}

@@ -7,9 +7,9 @@ const RoofingWork = () => {
   return (
     <main className="overflow-hidden bg-white">
       <SEO 
-        title="Best Industrial & Terrace Roofing Services in Trichy"
-        description="Reliable roofing work in Trichy. Industrial sheds, terrace roofing, PPGL sheet roofing, and polycarbonate sheet installations. Leak-proof and durable."
-        keywords="roofing work, industrial roofing contractor, metal roofing sheets, terrace roofing sheds, polycarbonate roofing"
+        title="Industrial & Terrace Roofing Services | RIITS Metal Craft"
+        description="Reliable roofing work in Trichy. Industrial sheds, terrace roofing, PPGL sheet roofing, and polycarbonate sheet installations."
+        keywords="industrial roofing, terrace roofing, roofing sheds"
       />
 
       {/* Hero Section */}

@@ -7,9 +7,9 @@ const ElevationWork = () => {
   return (
     <main className="overflow-hidden bg-white">
       <SEO 
-        title="Best Building Elevation & ACP Cladding Services in Trichy"
-        description="Premium building elevation and ACP cladding services in Trichy. We specialize in modern facades, HPL cladding, and architectural louvers for villas and offices."
-        keywords="building elevation work, ACP cladding contractor, modern facade design, HPL cladding, architectural louvers, exterior wall cladding"
+        title="Building Elevation & Cladding | RIITS Metal Craft"
+        description="Premium building elevation and ACP cladding services in Trichy. Modern facades, HPL cladding, and architectural louvers."
+        keywords="building elevation, ACP cladding, modern facade"
       />
 
       {/* Hero Section */}
@@ -59,7 +59,7 @@ const ElevationWork = () => {
                   First impressions matter, and the elevation of your building is its face to the world. At RIITS Metal Craft, we specialize in high-quality **Elevation Work** that combines aesthetic appeal with structural durability.
                 </p>
                 <p className="mb-6">
-                  Whether you are looking for modern **ACP Cladding**, elegant **HPL Panels**, or functional **Architectural Louvers**, our expert team ensures precision installation using the finest materials. We serve various sectors, including residential villas, commercial showrooms, and corporate offices in [City Name].
+                  Whether you are looking for modern **ACP Cladding**, elegant **HPL Panels**, or functional **Architectural Louvers**, our expert team ensures precision installation using the finest materials. We serve various sectors, including residential villas, commercial showrooms, and corporate offices in Trichy and surrounding districts.
                 </p>
                 
                 <h3 className="text-xl font-bold text-slate-800 mb-4 uppercase tracking-wide">Our Expertise Includes:</h3>

@@ -1,9 +1,9 @@
-# RITS Metal Craft - Project Documentation
+# Riits Metal Craft - Project Documentation
 
-Welcome to the **RITS Metal Craft** website project! This document completely explains the project structure, what technologies are used, and how everything is organized so that it is easily understandable for anyone
+Welcome to the **Riits Metal Craft** website project! This document completely explains the project structure, what technologies are used, and how everything is organized so that it is easily understandable for anyone
 
 ## 🏢 Project Overview 
-This is a modern, responsive, and fast web application built for **RITS Metal Craft**, a leading metal fabrication company in Trichy. The website showcases their metal fabrication services, products, past projects, and provides a way for customers to contact them.
+This is a modern, responsive, and fast web application built for **Riits Metal Craft**, a leading metal fabrication company in Trichy. The website showcases their metal fabrication services, products, past projects, and provides a way for customers to contact them.
 
 ## 💻 Tech Stack 
 - **Frontend Framework:** React 18

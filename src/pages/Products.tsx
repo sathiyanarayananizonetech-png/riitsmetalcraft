@@ -748,8 +748,8 @@ const Products = () => {
   return (
     <main className="min-h-[100dvh] bg-white pt-14 md:pt-16">
       <SEO
-        title="Our Products | RIITS Metal Craft"
-        description="Discover RIITS Metal Craft's full range of fabrication products in Trichy. From Steel Gates and SS Railings to Rolling Shutters, Aluminium Windows, and ACP Cladding."
+        title="Our Products | Riits Metal Craft"
+        description="Discover Riits Metal Craft's full range of fabrication products in Trichy. From Steel Gates and SS Railings to Rolling Shutters, Aluminium Windows, and ACP Cladding."
         keywords="steel gates, metal railings, rolling shutters, aluminium windows, products"
         ogImage="/images/home.webp"
       />

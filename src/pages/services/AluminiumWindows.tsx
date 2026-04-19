@@ -7,7 +7,7 @@ const AluminiumWindows = () => {
   return (
     <main className="overflow-hidden bg-white">
       <SEO 
-        title="Aluminium Windows & Glass Works | RIITS Metal Craft"
+        title="Aluminium Windows & Glass Works | Riits Metal Craft"
         description="Manufacturers of high-grade aluminium windows, sliding systems, and toughened glass works in Trichy. Energy-efficient and soundproof solutions."
         keywords="aluminium windows, sliding windows, toughened glass"
       />
@@ -56,7 +56,7 @@ const AluminiumWindows = () => {
               </h2>
               <div className="prose prose-slate max-w-none text-slate-600">
                 <p className="mb-4">
-                  Windows are more than just openings; they provide light, ventilation, and security. At RIITS Metal Craft, we manufacture high-performance **Aluminium Windows** that are built to last a lifetime.
+                  Windows are more than just openings; they provide light, ventilation, and security. At Riits Metal Craft, we manufacture high-performance **Aluminium Windows** that are built to last a lifetime.
                 </p>
                 <p className="mb-6">
                   Our window systems are designed for the modern home and office, offering superior sound insulation and energy efficiency. We also specialize in **Toughened Glass Works**, including structural glazing for showrooms and elegant glass handrails for staircases and balconies.

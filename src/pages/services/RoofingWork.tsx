@@ -7,7 +7,7 @@ const RoofingWork = () => {
   return (
     <main className="overflow-hidden bg-white">
       <SEO 
-        title="Industrial & Terrace Roofing Services | RIITS Metal Craft"
+        title="Industrial & Terrace Roofing Services | Riits Metal Craft"
         description="Reliable roofing work in Trichy. Industrial sheds, terrace roofing, PPGL sheet roofing, and polycarbonate sheet installations."
         keywords="industrial roofing, terrace roofing, roofing sheds"
       />
@@ -59,7 +59,7 @@ const RoofingWork = () => {
               </h2>
               <div className="prose prose-slate max-w-none text-slate-600">
                 <p className="mb-4">
-                  A high-quality roof is your property's first line of defense. At RIITS Metal Craft, we specialize in **Industrial & Terrace Roofing**, providing durable shedding solutions that are both functional and visually appealing.
+                  A high-quality roof is your property's first line of defense. At Riits Metal Craft, we specialize in **Industrial & Terrace Roofing**, providing durable shedding solutions that are both functional and visually appealing.
                 </p>
                 <p className="mb-6">
                   We offer a variety of roofing materials, from heavy-duty PPGL and Galvalume sheets for industrial warehouse sheds to stylish polycarbonate and UV-resistant sheets for home terrace areas. Our focus is always on structural stability and leak-proof installation.
@@ -130,7 +130,7 @@ const RoofingWork = () => {
             <Star className="w-3.5 h-3.5" /> Durable Roofing
           </div>
           <h2 className="font-heading text-3xl sm:text-4xl font-black text-[#1a3a6b] uppercase tracking-tight mb-12">
-            The RIITS Roofing Standard
+            The Riits Roofing Standard
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
             {[

@@ -7,7 +7,7 @@ const ElevationWork = () => {
   return (
     <main className="overflow-hidden bg-white">
       <SEO 
-        title="Building Elevation & Cladding | RIITS Metal Craft"
+        title="Building Elevation & Cladding | Riits Metal Craft"
         description="Premium building elevation and ACP cladding services in Trichy. Modern facades, HPL cladding, and architectural louvers."
         keywords="building elevation, ACP cladding, modern facade"
       />
@@ -56,7 +56,7 @@ const ElevationWork = () => {
               </h2>
               <div className="prose prose-slate max-w-none text-slate-600">
                 <p className="mb-4">
-                  First impressions matter, and the elevation of your building is its face to the world. At RIITS Metal Craft, we specialize in high-quality **Elevation Work** that combines aesthetic appeal with structural durability.
+                  First impressions matter, and the elevation of your building is its face to the world. At Riits Metal Craft, we specialize in high-quality **Elevation Work** that combines aesthetic appeal with structural durability.
                 </p>
                 <p className="mb-6">
                   Whether you are looking for modern **ACP Cladding**, elegant **HPL Panels**, or functional **Architectural Louvers**, our expert team ensures precision installation using the finest materials. We serve various sectors, including residential villas, commercial showrooms, and corporate offices in Trichy and surrounding districts.
@@ -124,10 +124,10 @@ const ElevationWork = () => {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-blue-100 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-[0.2em] mb-6">
-            <Star className="w-3.5 h-3.5" /> Why RIITS Metal Craft
+            <Star className="w-3.5 h-3.5" /> Why Riits Metal Craft
           </div>
           <h2 className="font-heading text-3xl sm:text-4xl font-black text-[#1a3a6b] uppercase tracking-tight mb-12">
-            The RIITS Quality Assurance
+            The Riits Quality Assurance
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
             {[

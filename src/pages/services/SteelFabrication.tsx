@@ -7,7 +7,7 @@ const SteelFabrication = () => {
   return (
     <main className="overflow-hidden bg-white">
       <SEO 
-        title="Structural Steel Fabrication | RIITS Metal Craft"
+        title="Structural Steel Fabrication | Riits Metal Craft"
         description="Industrial-grade structural steel fabrication in Trichy. We specialize in I-beam structures, trusses, and heavy-duty metal frames."
         keywords="structural steel, steel trusses, industrial fabrication"
       />
@@ -56,7 +56,7 @@ const SteelFabrication = () => {
               </h2>
               <div className="prose prose-slate max-w-none text-slate-600">
                 <p className="mb-4">
-                  Large-scale construction requires the unmatched strength of structural steel. At RIITS Metal Craft, we specialize in **Industrial Steel Fabrication**, providing the backbone for buildings, sheds, and specialized structures.
+                  Large-scale construction requires the unmatched strength of structural steel. At Riits Metal Craft, we specialize in **Industrial Steel Fabrication**, providing the backbone for buildings, sheds, and specialized structures.
                 </p>
                 <p className="mb-6">
                   Our fabrication process involves advanced welding techniques and rigorous quality checks to ensure every joint and beam meets safety standards. We manage everything from initial trusses to complete I-beam frame erection.

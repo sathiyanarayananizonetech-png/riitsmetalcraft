@@ -318,9 +318,9 @@ const Services = () => {
       style={{ transform: "translateZ(0)" }}
     >
       <SEO
-        title="Our Services | RIITS Metal Craft"
+        title="Our Services | Riits Metal Craft"
         description="We provide steel gates, railings, grills, and fabrication services in Trichy."
-        keywords="steel fabrication services, gate work Trichy, grill work Trichy"
+        keywords="steel fabrication services, gate work Trichy, grill work Trichy, Riits metal craft"
         ogImage="/images/services.webp"
       />
 

@@ -7,7 +7,7 @@ const SSWorks = () => {
   return (
     <main className="overflow-hidden bg-white">
       <SEO 
-        title="SS Railing & Gate Fabrication | RIITS Metal Craft"
+        title="SS Railing & Gate Fabrication | Riits Metal Craft"
         description="Experts in Stainless Steel (SS) works in Trichy. SS 304 grade gates, balcony railings, staircases, and custom decorative SS fabrication."
         keywords="SS railings, SS gates, stainless steel fabrication"
       />
@@ -56,7 +56,7 @@ const SSWorks = () => {
               </h2>
               <div className="prose prose-slate max-w-none text-slate-600">
                 <p className="mb-4">
-                  For a premium and modern look that lasts a lifetime, nothing beats Stainless Steel. At RIITS Metal Craft, we are experts in **SS Fabrication**, primarily using **SS 304 grade** to ensure maximum resistance against rust and corrosion.
+                  For a premium and modern look that lasts a lifetime, nothing beats Stainless Steel. At Riits Metal Craft, we are experts in **SS Fabrication**, primarily using **SS 304 grade** to ensure maximum resistance against rust and corrosion.
                 </p>
                 <p className="mb-6">
                   Our workmanship is characterized by seamless welds and a perfect mirror or matte finish. From decorative main gates that make a statement to sleek balcony railings combined with toughened glass, we deliver luxury fabrication for homes and commercial spaces.

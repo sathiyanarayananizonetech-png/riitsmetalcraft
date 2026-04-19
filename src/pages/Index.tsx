@@ -52,114 +52,17 @@ import "../styles/index-page.css";
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: COMPANY_NAME,
-  image: `https://riitsmetalcraft.in/og-image.jpg`,
-  url: "https://riitsmetalcraft.in",
-  telephone: CONTACT_DETAILS.primaryPhone.value,
-
-  priceRange: "₹₹",
-  address: {
+  "name": COMPANY_NAME,
+  "url": "https://riitsmetalcraft.in",
+  "telephone": "+91-9894794557",
+  "address": {
     "@type": "PostalAddress",
-    streetAddress: CONTACT_DETAILS.address.city,
-    addressLocality: CONTACT_DETAILS.address.city,
-    addressRegion: CONTACT_DETAILS.address.state,
-    postalCode: CONTACT_DETAILS.address.pincode,
-    addressCountry: "IN",
+    "addressLocality": "Tiruchirappalli",
+    "addressRegion": "Tamil Nadu",
+    "addressCountry": "IN",
   },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 10.8054,
-    longitude: 78.7438,
-  },
-  description:
-    "Trichy's most trusted metal fabrication studio — crafting steel gates, stainless steel railings, rolling shutters, aluminium windows & ACP cladding that stand the test of time.",
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ],
-    opens: "09:00",
-    closes: "20:00",
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5.0",
-    reviewCount: "800",
-  },
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Metal Fabrication Services",
-    itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Steel Gates & Grills",
-          description:
-            "Custom MS & SS gates, compound gates, window grills and sliding gates in Trichy",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Stainless Steel Railings & Handrails",
-          description:
-            "Balcony railings, staircase railings and steel handrails",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Rolling Shutters",
-          description:
-            "Shop shutters, commercial and industrial rolling shutter systems",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Aluminium & Glass Works",
-          description:
-            "Aluminium sliding windows, doors, partitions, toughened glass doors and glass partitions",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "ACP Cladding & Elevation",
-          description:
-            "ACP cladding panels, aluminium cladding panels and building facade panels",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Structural Steel Fabrication",
-          description:
-            "Steel pergolas, metal canopies, sheds, roofing and structural steel frames",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Laser Cutting",
-          description:
-            "High-precision laser cutting for SS and MS decorative gates, partitions and panels",
-        },
-      },
-    ],
-  },
+  "description":
+    "Riits Metal Craft – Trichy's leading metal fabrication company. Gates, railings, ACP cladding, aluminium glazing and industrial structures.",
 };
 
 /* ================= DATA ================= */
@@ -424,10 +327,7 @@ const serviceTags = [
 const HeroSection = () => (
   <section className="relative min-h-[100dvh] flex flex-col justify-center items-center bg-slate-950 overflow-hidden">
     {/* Visually hidden H1 for Google — primary SEO heading */}
-    <h1 className="sr-only">
-      Steel Gates, Railings, Rolling Shutters &amp; Metal Fabrication Works in
-      Trichy
-    </h1>
+    <h1 className="sr-only">Riits Metal Craft</h1>
 
     {/* Background image */}
     <div className="absolute inset-0 z-0">
@@ -915,9 +815,9 @@ const Index = () => {
       style={{ scrollBehavior: "smooth" }}
     >
       <SEO
-        title="Steel Gates & Railings in Trichy | RIITS Metal Craft"
-        description="Best steel gates, railings, and fabrication work in Trichy. Contact RIITS Metal Craft."
-        keywords="steel gates Trichy, railings Trichy, metal fabrication Trichy"
+        title="Riits Metal Craft – Trichy Metal Fabrication Company"
+        description="Riits Metal Craft – Trichy's leading metal fabrication company. Gates, railings, ACP cladding, aluminium glazing and industrial structures."
+        keywords="steel gates Trichy, railings Trichy, metal fabrication Trichy, Riits metal craft"
         schemaData={localBusinessSchema}
         ogImage="/images/home.webp"
       />

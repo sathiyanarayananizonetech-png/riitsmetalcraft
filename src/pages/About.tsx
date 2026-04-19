@@ -194,7 +194,7 @@ const CoverageMap = () => {
                 {d.main && (
                   <div className="absolute inset-0 flex flex-col items-center justify-center leading-none">
                     <span className="text-[9px] font-black text-white tracking-[0.2em] mb-0.5 ml-1">
-                      RIITS
+                      Riits
                     </span>
                     <div className="w-4 h-[1px] bg-blue-400/50" />
                   </div>
@@ -510,9 +510,9 @@ const About = () => {
       style={{ transform: "translateZ(0)", overflowX: "hidden" }}
     >
       <SEO
-        title="About Us | RIITS Metal Craft"
-        description="Learn more about RIITS Metal Craft — Trichy's premium fabrication shop with 15+ years of experience. We build high-quality steel gates, railings, rolling shutters, aluminium works & ACP cladding."
-        keywords="about RIITS, fabrication company Trichy, metal work experts"
+        title="About Us | Riits Metal Craft"
+        description="Learn more about Riits Metal Craft — Trichy's premium fabrication shop with 15+ years of experience. We build high-quality steel gates, railings, rolling shutters, aluminium works & ACP cladding."
+        keywords="about Riits, fabrication company Trichy, metal work experts"
         ogImage="/images/home.webp"
       />
 

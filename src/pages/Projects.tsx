@@ -293,7 +293,7 @@ const Projects = () => {
   return (
     <main className="pt-14 md:pt-16">
       <SEO
-        title="Our Projects | RIITS Metal Craft"
+        title="Our Projects | Riits Metal Craft"
         description="Browse our real-world fabrication projects in Trichy. See our expert work in Steel Gates, SS Railings, Rolling Shutters, and more."
         keywords="fabrication projects, steel gate work, railing work, portfolio"
         ogImage="/images/home.webp"

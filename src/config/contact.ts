@@ -1,7 +1,7 @@
 import LOGO_EMBLEM_IMG from "../assets/logo/RIITS LOGO.png";
 
-export const COMPANY_NAME = "RIITS Metal Craft";
-export const BRAND_NAME = "RIITS";
+export const COMPANY_NAME = "Riits Metal Craft";
+export const BRAND_NAME = "Riits";
 
 export const LOGO_EMBLEM = LOGO_EMBLEM_IMG;
 // LOGO_TEXT was removed as per user request to remove the text-based logo segment from Navbar

@@ -7,7 +7,7 @@ const MSWorks = () => {
   return (
     <main className="overflow-hidden bg-white">
       <SEO 
-        title="MS Gate & Window Grill Fabrication | RIITS Metal Craft"
+        title="MS Gate & Window Grill Fabrication | Riits Metal Craft"
         description="Leading Mild Steel (MS) works contractor in Trichy. Durable MS gates, security grills, MS sheds, and general structural MS fabrication."
         keywords="MS gates, window grills, mild steel fabrication"
       />
@@ -56,7 +56,7 @@ const MSWorks = () => {
               </h2>
               <div className="prose prose-slate max-w-none text-slate-600">
                 <p className="mb-4">
-                  For projects where strength and security are the top priorities, Mild Steel is the industry gold standard. At RIITS Metal Craft, we offer end-to-end **MS Fabrication** services that provide peace of mind and long-lasting durability.
+                  For projects where strength and security are the top priorities, Mild Steel is the industry gold standard. At Riits Metal Craft, we offer end-to-end **MS Fabrication** services that provide peace of mind and long-lasting durability.
                 </p>
                 <p className="mb-6">
                   We specialize in creating robust security solutions, including powder-coated window grills, heavy-duty main gates, and MS industrial sheds. Every piece we fabricate is treated with anti-rust primers and high-quality paints to withstand environmental wear.

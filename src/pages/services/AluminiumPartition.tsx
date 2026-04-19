@@ -7,7 +7,7 @@ const AluminiumPartition = () => {
   return (
     <main className="overflow-hidden bg-white">
       <SEO 
-        title="Aluminium Office Partition Work | RIITS Metal Craft"
+        title="Aluminium Office Partition Work | Riits Metal Craft"
         description="High-quality aluminium office partition work and glass cabins in Trichy. Durable, sleek, and affordable partitions for commercial and industrial spaces."
         keywords="aluminium partition, office partition, glass partition"
       />
@@ -56,7 +56,7 @@ const AluminiumPartition = () => {
               </h2>
               <div className="prose prose-slate max-w-none text-slate-600">
                 <p className="mb-4">
-                  Creating an organized and productive office environment starts with smart space management. At RIITS Metal Craft, we offer expert **Aluminium Partition Work** that combines functionality with a professional aesthetic.
+                  Creating an organized and productive office environment starts with smart space management. At Riits Metal Craft, we offer expert **Aluminium Partition Work** that combines functionality with a professional aesthetic.
                 </p>
                 <p className="mb-6">
                   Our aluminium frame sections are lightweight yet incredibly strong, making them the perfect choice for high-traffic office environments. We specialize in everything from basic half-partitions for cubicles to full-height soundproof glass cabins.

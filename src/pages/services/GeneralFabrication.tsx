@@ -7,7 +7,7 @@ const GeneralFabrication = () => {
   return (
     <main className="overflow-hidden bg-white">
       <SEO 
-        title="Custom Metal & General Fabrication | RIITS Metal Craft"
+        title="Custom Metal & General Fabrication | Riits Metal Craft"
         description="All-in-one shop for general fabrication work in Trichy. Custom welding, metal repairs, laser cutting, and architectural metal works."
         keywords="metal fabrication, general fabrication, custom welding"
       />
@@ -56,7 +56,7 @@ const GeneralFabrication = () => {
               </h2>
               <div className="prose prose-slate max-w-none text-slate-600">
                 <p className="mb-4">
-                  Sometimes, off-the-shelf solutions just won't cut it. At RIITS Metal Craft, our **General Fabrication** service is designed to tackle unique challenges and create bespoke metal structures tailored to your exact specifications.
+                  Sometimes, off-the-shelf solutions just won't cut it. At Riits Metal Craft, our **General Fabrication** service is designed to tackle unique challenges and create bespoke metal structures tailored to your exact specifications.
                 </p>
                 <p className="mb-6">
                   From architectural metal accents for modern interiors to large-scale structural repairs, we offer a versatile range of fabrication techniques. Our facility is equipped for precision laser cutting and expert welding across various metals.

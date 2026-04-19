@@ -96,8 +96,8 @@ const Contact = () => {
   return (
     <main className="pt-14 md:pt-16">
       <SEO
-        title="Contact Us | RIITS Metal Craft"
-        description="Get in touch with RIITS Metal Craft for steel and fabrication work in Trichy."
+        title="Contact Us | Riits Metal Craft"
+        description="Get in touch with Riits Metal Craft for steel and fabrication work in Trichy."
         keywords="contact metal work Trichy, steel gate shop Trichy"
         ogImage="/images/contact.webp"
       />
@@ -527,7 +527,7 @@ const Contact = () => {
               className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-blue-600/40 hover:-translate-y-1"
             >
               <MapPin className="w-5 h-5" />
-              Get Directions to RIITS Metal Craft
+              Get Directions to Riits Metal Craft
             </a>
           </div>
         </div>

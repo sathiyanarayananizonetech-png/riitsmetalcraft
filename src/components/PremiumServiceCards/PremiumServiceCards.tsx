@@ -89,7 +89,7 @@ export const PremiumServiceCards: React.FC = () => {
       title: "Shutters, Aluminium & Glass",
       p1: (
         <>
-          RIITS supplies and installs <strong>rolling shutters</strong>, <strong>shop shutters</strong> and 
+          Riits supplies and installs <strong>rolling shutters</strong>, <strong>shop shutters</strong> and 
           <strong> industrial shutters</strong> built for years of high-frequency use. We're the go-to team for 
           <strong> rolling shutter work near me</strong> across Trichy.
         </>

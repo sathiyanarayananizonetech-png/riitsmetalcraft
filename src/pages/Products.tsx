@@ -7,7 +7,29 @@ import {
   type MouseEvent,
   type ReactNode,
 } from "react";
-import { Phone, MessageCircle, CheckCircle2 } from "lucide-react";
+import { 
+  Phone, 
+  MessageCircle, 
+  CheckCircle2,
+  Shield,
+  Sparkles,
+  Gem,
+  Clock,
+  CloudRain,
+  Zap,
+  Building,
+  VolumeX,
+  Cloud,
+  Thermometer,
+  Landmark,
+  Settings,
+  Lock,
+  Wind,
+  Tag,
+  LayoutGrid,
+  type LucideIcon
+} from "lucide-react";
+
 import { TurtleButton } from "../components/TurtleButton";
 import SEO from "../components/SEO";
 import {
@@ -56,77 +78,77 @@ import laserDesign3 from "../assets/laserphoto/laser design3 webp.webp";
 import "../styles/products-page.css";
 
 /* ── Benefit detail copy ── */
-const benefitDetails: Record<string, { icon: string; desc: string }> = {
+const benefitDetails: Record<string, { icon: LucideIcon; desc: string }> = {
   "Corrosion-resistant": {
-    icon: "🛡️",
+    icon: Shield,
     desc: "Grade SS 304 alloy forms a passive oxide layer that withstands moisture, salt air, and harsh weather without rusting.",
   },
   "Low maintenance": {
-    icon: "✨",
+    icon: Sparkles,
     desc: "Smooth polished surfaces resist dirt buildup and require only periodic cleaning — no painting or re-coating needed.",
   },
   "Premium finish": {
-    icon: "💎",
+    icon: Gem,
     desc: "Brushed or mirror-polish options deliver a refined, architectural look that elevates any residential or commercial façade.",
   },
   "Long lifespan": {
-    icon: "⏳",
+    icon: Clock,
     desc: "Properly fabricated SS structures routinely last 25+ years with minimal upkeep, offering exceptional return on investment.",
   },
   "High strength": {
-    icon: "💪",
+    icon: Shield,
     desc: "Mild steel's tensile strength handles heavy structural loads, making it ideal for frames, sheds, and roofing systems.",
   },
   "Cost-effective": {
-    icon: "💰",
+    icon: Tag,
     desc: "MS is the most economical structural metal — delivering solid performance at a fraction of the cost of stainless options.",
   },
   Weldable: {
-    icon: "🔧",
+    icon: Zap,
     desc: "Excellent weldability allows complex custom shapes and on-site modifications without compromising structural integrity.",
   },
   "Versatile applications": {
-    icon: "🔄",
+    icon: LayoutGrid,
     desc: "From ornate gates to industrial shed columns, MS adapts to virtually any form factor or load requirement.",
   },
   "Weather-sealed": {
-    icon: "🌧️",
+    icon: CloudRain,
     desc: "EPDM gaskets and precision-fitted aluminium profiles block water, dust, and drafts for a fully weatherproof envelope.",
   },
   "Energy efficient": {
-    icon: "⚡",
+    icon: Zap,
     desc: "Thermal-break profiles and double-glazed units reduce heat transfer, cutting AC loads and lowering energy bills.",
   },
   "Modern aesthetics": {
-    icon: "🏙️",
+    icon: Building,
     desc: "Slim sightlines and large glass areas flood interiors with natural light while maintaining a sleek contemporary look.",
   },
   "Sound insulation": {
-    icon: "🔇",
+    icon: VolumeX,
     desc: "Multi-chamber profiles combined with laminated or DGU glass significantly reduce external noise transmission.",
   },
   "Weather protection": {
-    icon: "🌦️",
+    icon: Cloud,
     desc: "Composite and HPL panels act as a rainscreen barrier, channelling water away and protecting the structural wall beneath.",
   },
   "Thermal insulation": {
-    icon: "🌡️",
+    icon: Thermometer,
     desc: "Air gaps within the cladding system create a thermal buffer that keeps interiors cooler in summer and warmer in winter.",
   },
   "Architectural appeal": {
-    icon: "🏛️",
+    icon: Landmark,
     desc: "Wide palette of colours, textures, and panel profiles lets architects achieve bold or subtle design statements on any building.",
   },
   "Motorized options": {
-    icon: "⚙️",
+    icon: Settings,
     desc: "Integrated motor-and-remote systems allow one-touch open/close operation, compatible with phone apps and access control.",
   },
   "High security": {
-    icon: "🔒",
+    icon: Lock,
     desc: "Interlocking MS/GI slats and tamper-proof locking bars provide a robust physical barrier against forced entry.",
   },
   "Weather resistant": {
-    icon: "🌪️",
+    icon: Wind,
     desc: "Galvanised or powder-coated slats resist corrosion and UV degradation, maintaining performance through years of outdoor use.",
   },
 };
@@ -576,7 +598,7 @@ const BenefitCard = memo(
     onClick?: () => void;
   }) => {
     const detail = benefitDetails[label] ?? {
-      icon: "✅",
+      icon: CheckCircle2,
       desc: "Quality guaranteed.",
     };
     return (
@@ -595,7 +617,12 @@ const BenefitCard = memo(
               <div className="letter-border"></div>
               <div className="letter-title">{label}</div>
               <div className="letter-stamp">
-                <div className="letter-stamp-inner">{detail.icon}</div>
+                <div className="letter-stamp-inner">
+                  {(() => {
+                    const Icon = detail.icon;
+                    return <Icon className="w-5 h-5 text-blue-600" strokeWidth={2} />;
+                  })()}
+                </div>
               </div>
               <div className="letter-context">{detail.desc}</div>
             </div>
@@ -1196,7 +1223,7 @@ const Products = () => {
       >
         <div className="mx-auto max-w-7xl px-0 sm:px-4">
           <div
-            className="flex flex-nowrap overflow-x-auto justify-start sm:justify-center items-center gap-2 sm:gap-3 px-4 sm:px-0 pb-3 pt-1"
+            className="flex flex-nowrap overflow-x-auto justify-start sm:justify-center items-center gap-2 sm:gap-3 px-4 sm:px-0 pb-3 pt-1 no-scrollbar"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {productCategories.map((cat) => {

@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionHeading from "../components/SectionHeading";
 import { TurtleButton } from "../components/TurtleButton";
-import { X, CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, CheckCircle2, ChevronLeft, ChevronRight, Phone, MessageCircle } from "lucide-react";
 import SEO from "../components/SEO";
 import {
   CONTACT_DETAILS,
@@ -462,7 +462,7 @@ const Projects = () => {
                 variant="call_now"
                 className="rounded-xl px-10 w-full sm:w-auto"
               >
-                <span>📞</span> Call Now
+                <Phone className="w-4 h-4" /> Call Now
               </TurtleButton>
               <TurtleButton
                 href={getWhatsAppUrl()}
@@ -470,7 +470,7 @@ const Projects = () => {
                 external
                 className="rounded-xl px-10 w-full sm:w-auto"
               >
-                <span>💬</span> WhatsApp
+                <MessageCircle className="w-4 h-4" /> WhatsApp
               </TurtleButton>
             </motion.div>
           </motion.div>
@@ -576,7 +576,7 @@ const Projects = () => {
       ══════════════════════════════════════════ */}
       <AnimatePresence>
         {selectedProject && (
-          <div className="fixed inset-0 z-[11000] flex items-start sm:items-center justify-center pt-20 sm:pt-0 p-4 sm:p-6 md:p-10 overflow-y-auto">
+          <div className="fixed inset-0 z-[11000] flex items-start sm:items-center justify-center pt-20 sm:pt-0 p-4 sm:p-6 md:p-10 overflow-y-auto no-scrollbar">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -589,7 +589,7 @@ const Projects = () => {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="relative w-full max-w-5xl max-h-[90vh] bg-white dark:bg-slate-900 rounded-[2.5rem] overflow-x-hidden overflow-y-auto shadow-2xl flex flex-col"
+              className="relative w-[95vw] sm:w-[90vw] lg:w-[85vw] xl:w-[80vw] max-w-6xl max-h-[90vh] bg-white dark:bg-slate-900 rounded-[2rem] sm:rounded-[2.5rem] overflow-x-hidden overflow-y-auto no-scrollbar shadow-2xl flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
               <button
@@ -604,7 +604,7 @@ const Projects = () => {
                 <div className="lg:w-3/5 h-[300px] sm:h-[400px] lg:h-auto relative overflow-hidden bg-slate-100 dark:bg-slate-800">
                   <ProjectImageSlider p={selectedProject} isModal />
                 </div>
-                <div className="lg:w-2/5 p-8 sm:p-12 flex flex-col justify-center bg-white dark:bg-slate-900">
+                <div className="lg:w-2/5 p-6 sm:p-10 flex flex-col justify-center bg-white dark:bg-slate-900">
                   <div className="inline-flex items-center gap-2 mb-6">
                     <div className="w-8 h-[2px] bg-primary" />
                     <span className="text-primary text-xs font-black uppercase tracking-[0.3em]">
@@ -677,7 +677,7 @@ const Projects = () => {
               variant="call_now"
               className="rounded-xl px-10 w-full sm:w-auto"
             >
-              <span>📞</span> Call Our Expert
+              <Phone className="w-5 h-5" /> Call Our Expert
             </TurtleButton>
             <a
               href={getWhatsAppUrl()}
@@ -685,7 +685,7 @@ const Projects = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-400 text-white px-8 py-4 rounded-xl font-heading font-bold uppercase tracking-wider text-sm transition-all duration-300 shadow-lg hover:shadow-emerald-600/30 hover:shadow-2xl hover:-translate-y-1 w-full sm:w-auto"
             >
-              <span>💬</span> WhatsApp Details
+              <MessageCircle className="w-5 h-5" /> WhatsApp Details
             </a>
           </div>
           <div className="flex flex-wrap justify-center gap-6 mt-12 pt-10 border-t border-white/10">
@@ -803,29 +803,7 @@ const ProjectImageSlider = ({
         </>
       )}
 
-      {images.length > 1 && (
-        <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2 z-20 pt-4 px-4 bg-gradient-to-t from-black/50 to-transparent">
-          {images.map((_, i) => (
-            <button
-              key={i}
-              title={`Go to image ${i + 1}`}
-              onClick={(e) => {
-                e.stopPropagation();
-                setCurrent(i);
-              }}
-              className="group/dot p-1 transition-all"
-            >
-              <div
-                className={`h-1 rounded-full transition-all duration-500 ${
-                  current === i
-                    ? "w-6 bg-white shadow-[0_0_10px_rgba(255,255,255,0.5)]"
-                    : "w-2 bg-white/40 group-hover/dot:bg-white/60"
-                }`}
-              />
-            </button>
-          ))}
-        </div>
-      )}
+      {/* Dots removed as requested */}
     </div>
   );
 };

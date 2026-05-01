@@ -7,15 +7,17 @@ import {
   ArrowRight,
   CheckCircle2,
   MapPin,
-  Target,
-  Users,
   ClipboardList,
   Wrench,
   Truck,
-  Clock,
-  ThumbsUp,
-  Headphones,
-  FileCheck,
+  ClipboardCheck,
+  ShieldCheck,
+  HardHat,
+  Timer,
+  BadgeCheck,
+  HeartHandshake,
+  Eye,
+  Compass,
 } from "lucide-react";
 import SEO from "../components/SEO";
 import { TurtleButton } from "../components/TurtleButton";
@@ -308,7 +310,7 @@ export function VisionMission() {
             <div>
               <div className="vm-header">
                 <div className="vm-icon blue">
-                  <Target style={{ width: 28, height: 28, color: "#fff" }} />
+                  <Eye style={{ width: 28, height: 28, color: "#fff" }} />
                 </div>
                 <h2 className="vm-title blue">Our Vision</h2>
               </div>
@@ -343,7 +345,7 @@ export function VisionMission() {
             <div>
               <div className="vm-header">
                 <div className="vm-icon slate">
-                  <Wrench style={{ width: 28, height: 28, color: "#fff" }} />
+                  <Compass style={{ width: 28, height: 28, color: "#fff" }} />
                 </div>
                 <h2 className="vm-title slate">Our Mission</h2>
               </div>
@@ -377,7 +379,7 @@ export function VisionMission() {
 ══════════════════════════════════════════ */
 const deliveryPoints = [
   {
-    icon: FileCheck,
+    icon: ClipboardCheck,
     title: "Detailed Written Quote",
     description:
       "Every steel gate, railing or shutter project gets a transparent written quotation with material breakdown, labour costs and timeline — zero hidden charges.",
@@ -387,7 +389,7 @@ const deliveryPoints = [
     afterBg: "#2563eb",
   },
   {
-    icon: Wrench,
+    icon: ShieldCheck,
     title: "Premium Materials Only",
     description:
       "We use grade-A stainless steel (SS 304/202), mild steel, aluminium and toughened glass — no cheap substitutes, ever. Every material is verified before installation.",
@@ -396,7 +398,7 @@ const deliveryPoints = [
     afterBg: "#475569",
   },
   {
-    icon: Users,
+    icon: HardHat,
     title: "Own Skilled Crew",
     description:
       "Our in-house team of expert welders and fabricators handle every project — no subcontracting. 15+ years of experience in metal fabrication across Trichy.",
@@ -405,7 +407,7 @@ const deliveryPoints = [
     afterBg: "#f59e0b",
   },
   {
-    icon: Clock,
+    icon: Timer,
     title: "On-Time Installation",
     description:
       "We deliver and install every rolling shutter, aluminium door or glass partition on schedule. Mobile crew reaches your site in Trichy within 48 hours of request.",
@@ -414,7 +416,7 @@ const deliveryPoints = [
     afterBg: "#16a34a",
   },
   {
-    icon: ThumbsUp,
+    icon: BadgeCheck,
     title: "Quality Inspection",
     description:
       "Multi-point quality checks at workshop and site — welding integrity, alignment, finish and hardware fitment. Every steel gate and grill is inspected before handover.",
@@ -423,7 +425,7 @@ const deliveryPoints = [
     afterBg: "#6366f1",
   },
   {
-    icon: Headphones,
+    icon: HeartHandshake,
     title: "Post-Install Support",
     description:
       "Warranty coverage on all fabrication work with free maintenance guidance. Any issues with your shutter, railing or gate? Our team is just a call away.",

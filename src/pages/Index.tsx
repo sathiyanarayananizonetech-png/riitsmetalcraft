@@ -25,6 +25,15 @@ import {
   ArrowRight,
   Star,
   Quote,
+  Grid,
+  Fence,
+  ArrowUpRight,
+  PanelTop,
+  Maximize,
+  Building2,
+  Warehouse,
+  Home,
+  Zap,
 } from "lucide-react";
 import heroImage from "../assets/heropage/home page hero1.webp";
 import pricingImg from "../assets/whychoiseus/finance.webp";
@@ -69,7 +78,7 @@ const localBusinessSchema = {
 
 const services = [
   {
-    icon: "🚪",
+    icon: Grid,
     title: "Gates & Grills",
     desc: "Custom MS & SS gates with modern geometric designs",
     seoDesc:
@@ -79,7 +88,7 @@ const services = [
     productCategory: "ss",
   },
   {
-    icon: "🛡️",
+    icon: Fence,
     title: "Railings & Handrails",
     desc: "Brushed stainless steel balcony & staircase railings",
     seoDesc:
@@ -89,7 +98,7 @@ const services = [
     productCategory: "ss",
   },
   {
-    icon: "🪜",
+    icon: ArrowUpRight,
     title: "Staircases & Pergolas",
     desc: "Structural steel staircases and decorative pergolas",
     seoDesc:
@@ -99,7 +108,7 @@ const services = [
     productCategory: "ss",
   },
   {
-    icon: "🏗️",
+    icon: PanelTop,
     title: "Rolling Shutters",
     desc: "Heavy-duty commercial & industrial rolling systems",
     seoDesc:
@@ -109,7 +118,7 @@ const services = [
     productCategory: "shutters",
   },
   {
-    icon: "🪟",
+    icon: Maximize,
     title: "Aluminium & Glass",
     desc: "Sliding windows, glass partitions & structural glazing",
     seoDesc:
@@ -119,7 +128,7 @@ const services = [
     productCategory: "glass",
   },
   {
-    icon: "🏢",
+    icon: Layers,
     title: "Elevation & Cladding",
     desc: "ACP panels, HPL cladding & decorative facades",
     seoDesc:
@@ -129,7 +138,7 @@ const services = [
     productCategory: "elevation",
   },
   {
-    icon: "⚙️",
+    icon: Building2,
     title: "Structural Fabrication",
     desc: "Steel frames, sheds, roofing & support beams",
     seoDesc:
@@ -139,7 +148,7 @@ const services = [
     productCategory: "ms",
   },
   {
-    icon: "🏭",
+    icon: Warehouse,
     title: "Industrial Works",
     desc: "Large-scale industrial metal fabrication projects",
     seoDesc:
@@ -149,7 +158,7 @@ const services = [
     productCategory: "ms",
   },
   {
-    icon: "🏠",
+    icon: Home,
     title: "Roofing Works",
     desc: "Premium roofing solutions for residential and industrial projects",
     seoDesc:
@@ -159,7 +168,7 @@ const services = [
     productCategory: "roofing",
   },
   {
-    icon: "🎯",
+    icon: Zap,
     title: "LASER DESIGN",
     desc: "Precision laser cutting for custom metal designs",
     seoDesc:
@@ -844,7 +853,7 @@ const Index = () => {
         <div className="container-main max-w-6xl">
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 items-stretch min-h-[420px]">
             {/* Left: Service list */}
-            <div className="w-full lg:w-1/4 flex flex-col justify-between py-4">
+            <div className="w-full lg:w-1/4 flex flex-row lg:flex-col overflow-x-auto lg:overflow-visible gap-2 lg:gap-1 py-4 mb-4 lg:mb-0 no-scrollbar items-center lg:items-stretch">
               {services.map((item, index) => (
                 <motion.button
                   key={item.title}
@@ -852,16 +861,13 @@ const Index = () => {
                     setCurrentSlide(index);
                     setHasClicked(true);
                   }}
-                  onMouseEnter={() => {
-                    setCurrentSlide(index);
-                  }}
-                  className={`w-full text-left px-5 py-2.5 rounded-xl font-heading text-xs font-bold uppercase tracking-[0.15em] transition-all duration-150 border-2 ${
+                  className={`flex-shrink-0 lg:w-full text-left px-5 py-3 rounded-xl font-heading text-[10px] sm:text-xs font-bold uppercase tracking-[0.15em] transition-all duration-150 border-2 ${
                     currentSlide === index
-                      ? "bg-[hsl(225,73%,35%)] text-white border-[hsl(225,73%,35%)] shadow-lg sm:scale-105"
+                      ? "bg-[hsl(225,73%,35%)] text-white border-[hsl(225,73%,35%)] shadow-lg scale-105"
                       : "bg-white text-[hsl(225,73%,35%)]/85 border-transparent hover:bg-slate-50 hover:text-[hsl(225,73%,35%)]"
                   }`}
-                  whileHover={{ x: 8 }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={{ x: typeof window !== 'undefined' && window.innerWidth > 1024 ? 8 : 0 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   {item.title}
                 </motion.button>
@@ -887,19 +893,25 @@ const Index = () => {
 
                   {/* Mobile: flex-col so card sits directly above dots */}
                   <div className="flex flex-col md:block">
-                    <div className="relative md:flex md:items-center md:justify-center md:overflow-visible md:min-h-[320px]">
-                      <AnimatePresence>
+                    <div className="relative flex items-center justify-center min-h-[420px] sm:min-h-[380px] md:min-h-[350px]">
+                      <AnimatePresence mode="wait">
                         <motion.div
                           key={services[currentSlide].title}
-                          initial={{ x: 100, opacity: 0 }}
-                          animate={{ x: 0, opacity: 1 }}
-                          exit={{ x: -100, opacity: 0 }}
-                          transition={{ duration: 0.3, ease: "circOut" }}
-                          className="w-full max-w-lg bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden flex flex-col md:absolute"
+                          initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: -20, scale: 0.95 }}
+                          transition={{ 
+                            duration: 0.4, 
+                            ease: [0.22, 1, 0.36, 1] 
+                          }}
+                          className="w-full max-w-lg bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden flex flex-col absolute"
                         >
                           <div className="bg-[hsl(225,73%,35%)] px-8 py-8 md:p-6 text-center flex flex-col items-center justify-center relative">
                             <span className="text-5xl md:text-4xl mb-4 md:mb-3 bg-white/10 p-5 md:p-4 rounded-xl backdrop-blur-md inline-flex items-center justify-center w-[80px] h-[80px] md:w-[70px] md:h-[70px] shrink-0">
-                              {services[currentSlide].icon}
+                              {(() => {
+                                const Icon = services[currentSlide].icon;
+                                return <Icon className="w-10 h-10 md:w-8 md:h-8 text-white" strokeWidth={1.5} />;
+                              })()}
                             </span>
                             <h3 className="font-heading text-lg font-bold uppercase text-white tracking-[0.15em]">
                               {services[currentSlide].title}
@@ -924,27 +936,7 @@ const Index = () => {
                       </AnimatePresence>
                     </div>
 
-                  <div className="flex justify-center gap-1.5 sm:gap-2 mt-4">
-                    {services.map((_, i) => (
-                      <button
-                        key={i}
-                        onClick={() => {
-                          setCurrentSlide(i);
-                          setHasClicked(true);
-                        }}
-                        aria-label={`Go to slide ${i + 1}`}
-                        className="p-1 sm:p-4 transition-all duration-300 hover:scale-110 active:scale-95 outline-none group"
-                      >
-                        <div
-                          className={`h-2 rounded-full transition-all duration-300 ${
-                            currentSlide === i
-                              ? "bg-[hsl(225,73%,35%)] w-6"
-                              : "bg-slate-300 w-2"
-                          }`}
-                        />
-                      </button>
-                    ))}
-                  </div>
+
                   </div>
                 </div>
               </div>

@@ -1,16 +1,17 @@
 import React from 'react';
+import { Fence, PanelTop, Building2, type LucideIcon } from 'lucide-react';
 
 import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
 import './PremiumServiceCards.css';
 
 interface ServiceCardProps {
-  icon: string;
+  icon: LucideIcon;
   title: string;
   p1: React.ReactNode;
   p2: React.ReactNode;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, p1, p2 }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ icon: Icon, title, p1, p2 }) => {
   const { targetRef, isIntersecting } = useIntersectionObserver({ threshold: 0.2 });
 
   return (
@@ -37,7 +38,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, p1, p2 }) => {
           </div>
 
           <div className="card-front-content">
-            <small className="card-badge">{icon}</small>
+            <small className="card-badge">
+              <Icon className="w-8 h-8 text-white/90" strokeWidth={1.5} />
+            </small>
             
             <div className="card-description">
               <div className="card-title-row">
@@ -66,7 +69,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, p1, p2 }) => {
 export const PremiumServiceCards: React.FC = () => {
   const cards = [
     {
-      icon: "🚪",
+      icon: Fence,
       title: "Gates, Grills & Railings",
       p1: (
         <>
@@ -85,7 +88,7 @@ export const PremiumServiceCards: React.FC = () => {
       ),
     },
     {
-      icon: "🏗️",
+      icon: PanelTop,
       title: "Shutters, Aluminium & Glass",
       p1: (
         <>
@@ -104,7 +107,7 @@ export const PremiumServiceCards: React.FC = () => {
       ),
     },
     {
-      icon: "🏢",
+      icon: Building2,
       title: "Cladding & Structural Works",
       p1: (
         <>

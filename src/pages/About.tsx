@@ -39,6 +39,7 @@ const R = ({
   duration = 0.5,
   dir = "up",
   margin = "-50px",
+  className = "",
 }: any) => {
   const v = {
     up: { y: 20 },
@@ -53,6 +54,7 @@ const R = ({
       whileInView={{ opacity: 1, x: 0, y: 0 }}
       viewport={{ once: true, margin }}
       transition={{ duration, delay, ease: "easeOut" }}
+      className={className}
     >
       {children}
     </motion.div>
@@ -619,7 +621,7 @@ const About = () => {
 
       {/* ── STATS GRID ── */}
       <section
-        className="relative z-20 -mt-20 lg:-mt-24 mb-0"
+        className="relative z-20 -mt-4 lg:-mt-6 mb-0"
         style={{ overflow: "visible" }}
       >
         <div className="ctr">
@@ -689,7 +691,7 @@ const About = () => {
               "Polycarbonate Roofing",
               "Custom Glass Partitions",
             ].map((m, i) => (
-              <R key={m} delay={i * 0.05}>
+              <R key={m} delay={i * 0.05} className="h-full">
                 {" "}
                 <div className="mat-card">
                   {" "}

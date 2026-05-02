@@ -5,15 +5,16 @@ interface SectionHeadingProps {
   title: string;
   description?: string;
   light?: boolean;
+  className?: string;
 }
 
-const SectionHeading = ({ subtitle, title, description, light }: SectionHeadingProps) => (
+const SectionHeading = ({ subtitle, title, description, light, className }: SectionHeadingProps) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-50px" }}
     transition={{ duration: 0.6 }}
-    className="text-center mb-14"
+    className={`text-center ${className || "mb-10"}`}
   >
     <p className={`section-subtitle mb-3 font-bold ${light ? "text-silver" : ""}`}>{subtitle}</p>
     <h2 className={`heading-lg ${light ? "text-primary-foreground" : "text-foreground"}`}>{title}</h2>

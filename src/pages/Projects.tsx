@@ -532,7 +532,7 @@ const Projects = () => {
                   className="group flex flex-col md:flex-row bg-white dark:bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-200/60 dark:border-slate-800 shadow-xl shadow-slate-200/20 dark:shadow-none hover:shadow-2xl hover:shadow-primary/10 dark:hover:border-primary/30 transition-all duration-500"
                 >
                   {/* Project Image Area with Auto-Slider */}
-                  <div className="md:w-5/12 aspect-[16/10] md:aspect-auto overflow-hidden relative">
+                  <div className="md:w-1/2 aspect-[4/3] overflow-hidden relative shrink-0">
                     <ProjectImageSlider p={p} />
                     <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors duration-500 pointer-events-none" />
                   </div>
@@ -601,7 +601,7 @@ const Projects = () => {
               </button>
 
               <div className="flex flex-col lg:flex-row h-full">
-                <div className="lg:w-3/5 h-[300px] sm:h-[400px] lg:h-auto relative overflow-hidden bg-slate-100 dark:bg-slate-800">
+                <div className="lg:w-1/2 aspect-[4/3] relative overflow-hidden bg-slate-100 dark:bg-slate-800">
                   <ProjectImageSlider p={selectedProject} isModal />
                 </div>
                 <div className="lg:w-2/5 p-6 sm:p-10 flex flex-col justify-center bg-white dark:bg-slate-900">
@@ -724,12 +724,9 @@ const ProjectImageSlider = ({
 
   useEffect(() => {
     if (isModal || images.length <= 1) return;
-    const id = setInterval(
-      () => {
-        setCurrent((prev) => (prev + 1) % images.length);
-      },
-      3000 + Math.random() * 2000,
-    ); // Randomize timing so they don't all shift at once
+    const id = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 4000); // Synchronized timing as requested
     return () => clearInterval(id);
   }, [images.length, isModal]);
 

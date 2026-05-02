@@ -39,7 +39,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon: Icon, title, p1, p2 }) 
 
           <div className="card-front-content">
             <small className="card-badge">
-              <Icon className="w-8 h-8 text-white/90" strokeWidth={1.5} />
+              <Icon className="w-6 h-6 text-white/90" strokeWidth={1.5} />
             </small>
             
             <div className="card-description">

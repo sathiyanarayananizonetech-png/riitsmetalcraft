@@ -137,6 +137,7 @@ const ProcessSection: React.FC = () => {
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
+      style={{ transform: "translateZ(0)", backfaceVisibility: "hidden" }}
     >
       <div className="max-w-7xl mx-auto">
         {/* ── ADDRESS BAR UI ── */}
@@ -187,12 +188,15 @@ const ProcessSection: React.FC = () => {
 
         {/* Progress bar */}
         <div className="flex items-center gap-1.5 sm:gap-3 mb-4 max-w-lg mx-auto">
-          <div className="flex-1 h-2 rounded-full bg-white/15 overflow-hidden">
-            <div
-              className="h-full rounded-full bg-white transition-all duration-700 ease-in-out"
-              style={{ width: `${progressPct}%` }}
-            />
-          </div>
+            <div className="flex-1 h-2 rounded-full bg-white/15 overflow-hidden">
+              <motion.div
+                className="h-full rounded-full bg-white"
+                initial={false}
+                animate={{ width: `${progressPct}%` }}
+                transition={{ duration: 0.7, ease: "easeInOut" }}
+                style={{ willChange: "width" }}
+              />
+            </div>
           <span className="text-white/90 text-[10px] sm:text-xs font-semibold font-heading uppercase tracking-wider whitespace-nowrap">
             {active + 1} / {STEPS.length}
           </span>
@@ -201,26 +205,35 @@ const ProcessSection: React.FC = () => {
         {/* Two-column layout */}
         <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 items-center">
           {/* LEFT — timeline */}
-          <div className="relative flex flex-col">
+          <div className="relative flex flex-col min-h-[460px] sm:min-h-[500px]">
             <div className="absolute left-[17px] top-5 bottom-5 w-[2px] bg-white/20 rounded-full" />
-            <div
-              className="absolute left-[17px] top-5 w-[2px] bg-white rounded-full transition-all duration-700 ease-in-out"
-              style={{ height: `calc(${progressPct}% - 40px)` }}
+            
+            <motion.div
+              className="absolute left-[17px] top-5 w-[2px] bg-white rounded-full z-0"
+              initial={false}
+              animate={{ height: `calc(${progressPct}% - 40px)` }}
+              transition={{ duration: 0.7, ease: "easeInOut" }}
+              style={{ minHeight: 0 }}
             />
 
-            <div className="flex flex-col gap-0">
-              {STEPS.map((step, i) => {
-                const isActive = active === i;
-                const isPast = i < active;
+            <motion.div 
+              layout 
+              className="flex flex-col gap-0 relative z-10"
+            >
+              <motion.div layout className="contents">
+                {STEPS.map((step, i) => {
+                  const isActive = active === i;
+                  const isPast = i < active;
 
-                return (
-                  <button
-                    key={step.num}
-                    onClick={() => handleStepChange(i)}
-                    onMouseEnter={() => handleStepChange(i)}
-                    aria-label={`Switch to ${step.title}`}
-                    className="flex items-start gap-3 sm:gap-5 text-left group py-3 focus:outline-none"
-                  >
+                  return (
+                    <motion.button
+                      layout
+                      key={step.num}
+                      onClick={() => handleStepChange(i)}
+                      onMouseEnter={() => handleStepChange(i)}
+                      aria-label={`Switch to ${step.title}`}
+                      className="flex items-start gap-3 sm:gap-5 text-left group py-3 focus:outline-none"
+                    >
                     <div className="relative shrink-0 z-10 mt-1">
                       {isActive && (
                         <span className="absolute inset-0 rounded-full bg-white/30 animate-ping" />
@@ -256,56 +269,60 @@ const ProcessSection: React.FC = () => {
                         {step.title}
                       </span>
 
-                      <div
-                        className={[
-                          "overflow-hidden transition-all duration-500",
-                          isActive
-                            ? "max-h-[500px] mt-1 opacity-100 pb-2"
-                            : "max-h-0 opacity-0",
-                        ].join(" ")}
-                      >
-                        <p
-                          className={`text-[0.8rem] transition-colors duration-300 font-medium leading-relaxed mb-2 ${isActive ? "text-[#084158]" : "text-white/50"}`}
-                        >
-                          {step.desc}
-                        </p>
-
-                        {isActive && step.bullets && (
-                          <div className="flex flex-col gap-1.5 mb-4">
-                            {step.bullets.map((bullet, idx) => (
-                              <div
-                                key={idx}
-                                className="flex items-center gap-2"
-                              >
-                                <CheckCircle2
-                                  className={`w-3.5 h-3.5 transition-colors duration-300 ${isActive ? "text-[#084158]" : "text-white/50"}`}
-                                />
-                                <span
-                                  className={`text-[0.75rem] font-bold transition-colors duration-300 ${isActive ? "text-[#084158]/80" : "text-white/40"}`}
-                                >
-                                  {bullet}
-                                </span>
-                              </div>
-                            ))}
-                          </div>
-                        )}
-
-                        {isActive && step.num === "06" && (
-                          <TurtleButton
-                            href={formatTelLink(
-                              CONTACT_DETAILS.primaryPhone.value,
-                            )}
-                            className="w-full sm:w-auto h-9 text-[10px] font-black uppercase tracking-widest rounded-lg bg-[#084158] text-white hover:bg-[#0d2557]"
+                      <AnimatePresence initial={false}>
+                        {isActive && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
+                            className="overflow-hidden mt-1 pb-2"
                           >
-                            <Phone className="w-3 h-3" /> Get a Specific Quote
-                          </TurtleButton>
+                            <p
+                              className={`text-[0.8rem] font-medium leading-relaxed mb-2 ${isActive ? "text-[#084158]" : "text-white/50"}`}
+                            >
+                              {step.desc}
+                            </p>
+
+                            {step.bullets && (
+                              <div className="flex flex-col gap-1.5 mb-4">
+                                {step.bullets.map((bullet, idx) => (
+                                  <div
+                                    key={idx}
+                                    className="flex items-center gap-2"
+                                  >
+                                    <CheckCircle2
+                                      className="w-3.5 h-3.5 text-[#084158]"
+                                    />
+                                    <span
+                                      className="text-[0.75rem] font-bold text-[#084158]/80"
+                                    >
+                                      {bullet}
+                                    </span>
+                                  </div>
+                                ))}
+                              </div>
+                            )}
+
+                            {step.num === "06" && (
+                              <TurtleButton
+                                href={formatTelLink(
+                                  CONTACT_DETAILS.primaryPhone.value,
+                                )}
+                                className="w-full sm:w-auto h-9 text-[10px] font-black uppercase tracking-widest rounded-lg bg-[#084158] text-white hover:bg-[#0d2557]"
+                              >
+                                <Phone className="w-3 h-3" /> Get a Specific Quote
+                              </TurtleButton>
+                            )}
+                          </motion.div>
                         )}
-                      </div>
+                      </AnimatePresence>
                     </div>
-                  </button>
-                );
-              })}
-            </div>
+                    </motion.button>
+                  );
+                })}
+              </motion.div>
+            </motion.div>
           </div>
 
           {/* RIGHT — circle */}

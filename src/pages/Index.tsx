@@ -467,7 +467,7 @@ const HeroSection = () => (
 const WhyUsSection = ({ isMobile }: { isMobile: boolean }) => {
   return (
     <section
-      className="min-h-screen flex items-center py-[8vh] md:py-16 lg:py-0 bg-muted relative overflow-hidden"
+      className="min-h-screen flex items-center py-10 md:py-14 lg:py-16 bg-muted relative overflow-hidden"
       style={{ contentVisibility: "auto", containIntrinsicSize: "auto 100vh" }}
     >
       <div
@@ -479,8 +479,8 @@ const WhyUsSection = ({ isMobile }: { isMobile: boolean }) => {
         }}
       />
       <div className="container-main relative">
-        <SectionHeading subtitle={`Why ${BRAND_NAME}`} title="Why Choose Us" />
-        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <SectionHeading subtitle={`Why ${BRAND_NAME}`} title="Why Choose Us" className="mb-10" />
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {whyUs.map(({ Icon, title, desc, highlights, accent, bg }, i) => (
             <motion.div
               key={i}
@@ -489,7 +489,7 @@ const WhyUsSection = ({ isMobile }: { isMobile: boolean }) => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, ease: "easeOut" }}
               className="group why-card relative overflow-hidden rounded-[2rem] cursor-default shadow-lg bg-slate-900"
-              style={{ minHeight: "420px", transform: "translateZ(0)" }}
+              style={{ minHeight: "400px", transform: "translateZ(0)" }}
             >
               <img
                 src={bg}
@@ -503,17 +503,17 @@ const WhyUsSection = ({ isMobile }: { isMobile: boolean }) => {
                 className="absolute top-0 left-0 right-0 h-[3px]"
                 style={{ backgroundColor: accent }}
               />
-              <div className="relative z-10 h-full flex flex-col justify-end p-7">
-                <div className="mb-5 w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 bg-white/20 border border-white/30 group-hover:bg-white group-hover:text-blue-900">
+              <div className="relative z-10 h-full flex flex-col justify-end p-6">
+                <div className="mb-4 w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300 bg-white/20 border border-white/30 group-hover:bg-white group-hover:text-blue-900">
                   <Icon className="w-5 h-5 text-white group-hover:text-blue-900" />
                 </div>
-                <h3 className="text-xl font-bold text-white font-display mb-2">
+                <h3 className="text-xl font-bold text-white font-display mb-1.5">
                   {title}
                 </h3>
-                <p className="text-sm text-white/70 leading-relaxed mb-4 max-w-sm">
+                <p className="text-[13px] text-white/70 leading-relaxed mb-3 max-w-sm">
                   {desc}
                 </p>
-                <motion.ul className="overflow-hidden flex flex-col gap-2 mb-4">
+                <motion.ul className="overflow-hidden flex flex-col gap-1.5 mb-3">
                   {highlights.map((h, j) => (
                     <li
                       key={j}
@@ -543,7 +543,7 @@ const WhyUsSection = ({ isMobile }: { isMobile: boolean }) => {
             duration: isMobile ? 0.35 : 0.6,
             delay: isMobile ? 0.1 : 0.5,
           }}
-          className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 px-[4vw] md:px-0"
+          className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 px-[4vw] md:px-0"
         >
           {[
             { val: "800+", label: "Projects Completed" },
@@ -553,12 +553,12 @@ const WhyUsSection = ({ isMobile }: { isMobile: boolean }) => {
           ].map((s, i) => (
             <div
               key={i}
-              className="py-6 text-center rounded-2xl border border-border/60 bg-background shadow-sm"
+              className="py-5 text-center rounded-2xl border border-border/60 bg-background shadow-sm"
             >
               <div className="text-2xl font-black font-display text-primary">
                 {s.val}
               </div>
-              <div className="text-[10px] uppercase tracking-widest text-muted-foreground mt-1">
+              <div className="text-[10px] uppercase tracking-widest text-muted-foreground mt-0.5">
                 {s.label}
               </div>
             </div>
